@@ -25,5 +25,5 @@ jobs:
           port: 22
           script: |
             sudo rm -r /var/www/jackson_okram/ZachAtom/profile-page/*.*
-            sudo cp -r /home/ubuntu/jack/ZachAtom/*.* /var/www/jackson_okram/ZachAtom/profile-page/
+            sudo cp -r /home/ubuntu/jack/ZachAtom/profile-page/*.* /var/www/jackson_okram/ZachAtom/profile-page/
             sudo service nginx restart 
