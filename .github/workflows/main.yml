@@ -1,0 +1,29 @@
+name: Deploy static page to ec2 vm  Auto trigger
+on:  push
+jobs:
+  deploy:
+    name: Push to EC2 Instance
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v1
+      - name: Pull code to my EC2 instance
+        uses: easingthemes/ssh-deploy@v2.1.5
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          SOURCE: "./"
+          REMOTE_HOST: ${{ secrets.IP }}
+          REMOTE_USER: ${{ secrets.EC2_USER}}
+          TARGET: "/home/ubuntu/tom"
+          ARGS: "-v"
+      - name: Execute remote SSH commands using SSH key
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.IP }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          port: 22
+          script: |
+            sudo rm -r /var/www/jackson_okram/ZachAtom/profile-page/*.*
+            sudo cp -r /home/ubuntu/jack/ZachAtom/*.* /var/www/jackson_okram/ZachAtom/profile-page/
+            sudo service nginx restart 
