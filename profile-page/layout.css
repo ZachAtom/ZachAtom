@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.resume {
+    display: flex;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-column {
+    width: 25%;
+    background-color: #808080;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center align the profile picture and name */
+    gap: 15px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid #fff; /* White border for profile picture */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name h1 {
+    font-size: 1.8em;
+    margin: 10px 0 0;
+    text-align: center;
+    color: #fff;
+}
+
+.contact-section {
+    width: 100%;
+    background-color: #0056b3;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h3 {
+    margin: 0 0 5px;
+    font-size: 1.2em;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+}
+
+.contact-section p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-section a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.right-column {
+    width: 75%;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #0056b3;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #efefef;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.education-item {
+    margin-bottom: 15px;
+}
+
+.education-item h3 {
+    color: #0056b3;
+}
+
+p {
+    margin: 5px 0;
+}
+.skills.box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.skills .box .percent{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: #f0f0f0;
+
+}
+.skills .box .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #0056b3;
+}
+.languages.box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.languages .box .percent{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: #f0f0f0;
+
+}
+.languages .box .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #0056b3;
+}
+.hobbies ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+.certificate h3 {
+    color: #0056b3;
+}
