@@ -14,7 +14,7 @@ jobs:
           SOURCE: "./"
           REMOTE_HOST: ${{ secrets.IP }}
           REMOTE_USER: ${{ secrets.EC2_USER}}
-          TARGET: "/home/ubuntu/tom"
+          TARGET: "/home/ubuntu/jack"
           ARGS: "-v"
       - name: Execute remote SSH commands using SSH key
         uses: appleboy/ssh-action@v1.0.3
@@ -25,5 +25,5 @@ jobs:
           port: 22
           script: |
             sudo rm -r /var/www/jackson_okram/ZachAtom/profile-page/*.*
-            sudo cp -r /home/ubuntu/jack/*.* /var/www/jackson_okram/
+            sudo cp -r /home/ubuntu/jack/ZachAtom/*.* /var/www/jackson_okram/ZachAtom/profile-page/
             sudo service nginx restart 
